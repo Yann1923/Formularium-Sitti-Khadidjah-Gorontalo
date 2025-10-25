@@ -1,0 +1,3 @@
+therapy_class,sub_therapy_class,name,sediaan,kekuatan,satuan,peresepan_maksimal,restriksi_kelas_terapi,indications,contraindications,side_effects,dosage_instructions,description,manufacturer,generic_name,category,expiry_date,created_by,updated_by
+Analgesik,Opioid,Morphine,Tablet,10,mg,2,Restricted,"Nyeri berat","Hipotensi","Mual","Dewasa: 10mg setiap 4-6 jam","Obat opioid untuk nyeri","Pharma Inc",Morphine,Painkiller,2026-12-31,1,1
+Antibiotik,Sintetik,Amoxicillin,Kapsul,500,mg,3,None,"Infeksi bakteri","Alergi aminopenisilin","Diarah","Dewasa: 500mg setiap 8 jam","Antibiotik broad-spectrum","Example Labs",Amoxicillin,Antibiotic,2026-06-30,1,1
