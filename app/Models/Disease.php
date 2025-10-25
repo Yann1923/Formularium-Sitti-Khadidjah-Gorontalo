@@ -22,6 +22,21 @@ class Disease extends Model
         'prevention',
         'complications',
     ];
+    
+    public function medicines()
+    {
+        return $this->belongsToMany(Medicine::class)
+                    ->withPivot('dosage', 'notes')
+                    ->withTimestamps();
+
+    /**
+     * Get the medicines associated with this disease
+     */
+    public function medicines()
+    {
+        return $this->belongsToMany(Medicine::class)
+                    ->withPivot('dosage', 'notes')
+                    ->withTimestamps();
 
     /**
      * Get the user who created this disease

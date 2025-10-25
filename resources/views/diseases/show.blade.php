@@ -127,6 +127,41 @@
                 </div>
                 @endif
                 
+                <!-- Daftar Obat Terkait -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">
+                        <i class="fas fa-prescription-bottle-alt text-primary me-2"></i>Obat yang Direkomendasikan
+                    </label>
+                    @if($disease->medicines->count() > 0)
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Nama Obat</th>
+                                        <th>Dosis</th>
+                                        <th>Catatan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($disease->medicines as $medicine)
+                                    <tr>
+                                        <td>
+                                            <a href="{{ route('medicines.show', $medicine) }}" class="text-decoration-none">
+                                                {{ $medicine->name }}
+                                            </a>
+                                        </td>
+                                        <td>{{ $medicine->pivot->dosage }}</td>
+                                        <td>{{ $medicine->pivot->notes }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    @else
+                        <p class="text-muted mb-0">Belum ada obat yang terdaftar untuk penyakit ini.</p>
+                    @endif
+                </div>
+                
                 @if($disease->prevention)
                 <div class="mb-3">
                     <label class="form-label fw-bold">
